@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsDemo.Views.PresentationPage"
+             Title="PresentationPage">
+    <VerticalStackLayout Padding="5">
+        <Frame Padding="8" BorderColor="DarkGray" CornerRadius="10" HasShadow="True" >
+        <VerticalStackLayout>
+            <Label Margin="0,0,0,10" Text="Welcome to my app"/>
+            <BoxView HeightRequest="4" HorizontalOptions="Fill" Color="Gray"/>
+            <Ellipse Margin="0,14,0,10" HeightRequest="150" HorizontalOptions="Center" Stroke="Red" StrokeThickness="4" WidthRequest="150">
+                <Ellipse.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Offset="0.1" Color="Red"/>
+                        <GradientStop Offset="1.0" Color="LightPink"/>
+                    </RadialGradientBrush>
+                </Ellipse.Background>
+            </Ellipse>
+        </VerticalStackLayout>
+        </Frame>
+
+    </VerticalStackLayout>
+</ContentPage>

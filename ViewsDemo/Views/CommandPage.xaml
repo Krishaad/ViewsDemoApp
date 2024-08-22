@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsDemo.Views.CommandPage"
+             Title="CommandPage">
+    <Grid RowDefinitions="auto, *" >
+        <VerticalStackLayout>
+            <Button
+                Margin="20"
+                Clicked="Clicked"
+                Text="Click Me"
+                WidthRequest="100"/>
+            <Border Margin="10" Padding="10">
+                <StackLayout RadioButtonGroup.GroupName="colors">
+                    <Label Text="Whats your favourite color"/>
+                    <RadioButton CheckedChanged="RadioButton_CheckedChanged" Content="Red"/>
+                    <RadioButton CheckedChanged="RadioButton_CheckedChanged" Content="Green"/>
+                    <RadioButton CheckedChanged="RadioButton_CheckedChanged" Content="Blue"/>
+                    <RadioButton CheckedChanged="RadioButton_CheckedChanged" Content="Other"/>
+                </StackLayout>
+            </Border>
+            <ImageButton
+                Margin="10"
+                Clicked="ImageButton_Clicked"
+                HeightRequest="64"
+                IsEnabled="True"
+                Source="gear.png"
+                WidthRequest="64"/>
+            
+        </VerticalStackLayout>
+        <Label
+            x:Name="label"
+            Grid.Row="1"
+            VerticalOptions="End"/>
+
+    </Grid>
+</ContentPage>

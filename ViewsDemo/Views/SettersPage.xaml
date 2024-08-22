@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ViewsDemo.Views.SettersPage"
+             Shell.NavBarIsVisible="false"
+             Title="SettersPage">
+    <Grid Margin="10" RowDefinitions="auto,*">
+        <VerticalStackLayout Spacing="10">
+            <Grid ColumnDefinitions="auto,*" RowDefinitions="20">
+                <Label Text="Check!" VerticalOptions="Center"/>
+                <CheckBox
+                    Grid.Column="1"
+                    CheckedChanged="Checkbox_CheckedChanged"
+                    IsChecked="True"
+                    VerticalOptions="Center"/>
+            </Grid>
+            <DatePicker
+                x:Name="datePicker"
+                DateSelected="datePicker_DateSelected"
+                HorizontalOptions="Center"/>
+            <Image
+                x:Name="image"
+                Aspect="AspectFit"
+                HeightRequest="128"
+                Source="gear.png"/>
+            <Slider
+                x:Name="slider"
+                Maximum="360"
+                ValueChanged="Slider_ValueChanged"/>
+            <Stepper
+                HorizontalOptions="Center"
+                Increment="30"
+                Maximum="360"
+                Minimum="0"
+                ValueChanged="Stepper_ValueChanged"/>
+
+
+        </VerticalStackLayout>
+               <Label
+                x:Name="label"
+                Grid.Row="1"
+                VerticalOptions="End"/>
+    </Grid>
+</ContentPage>

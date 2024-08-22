@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="ViewsDemo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:ViewsDemo"
+    xmlns:views ="clr-namespace:ViewsDemo.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="ViewsDemo">
+
+    <TabBar>
+        <ShellContent Title="Presentation" ContentTemplate="{DataTemplate views:PresentationPage}"/>
+        <ShellContent Title="Command" ContentTemplate="{DataTemplate views:CommandPage}"/>
+        <ShellContent Title="Setters" ContentTemplate="{DataTemplate views:SettersPage}"/>
+    </TabBar>
+
+</Shell>
